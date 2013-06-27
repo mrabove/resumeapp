@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>	
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/style.css">
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/moment.js"></script>
+		<style>
+
+.labely {
+	min-width:200px;
+}
+
+.accordion-inner #address {
+	clear:both;
+	display:inline-block;
+	width:100%;
+}
+
+.boxleft {
+	float:left;
+	width:50%;
+}
+
+.boxright {
+	float:left;
+	width:50%;
+}
+
+.cat2 {
+	display:block;
+}
+
+#city, #state, #street, #phonenumber, #email, #skype {
+	display:block;
+}
+
+.big-btn {
+	width:100%;
+	height:35px;
+	font-size:25px;
+	font-weight:300;
+	margin:0 auto;
+}
+
+		</style>
+		
+	</head>
+
+	
+
+	<body>
+
+ 
+
+<!--
+<script>
+  window.fbAsyncInit = function() {
+    // init the FB JS SDK
+	    FB.init({
+	      appId      : '594973113870977',                        // App ID from the app dashboard
+	      status     : true,                                 // Check Facebook Login status
+	      xfbml      : true                                  // Look for social plugins on the page
+	    });
+	
+		function cb_login(response) {
+   			if (response.authResponse) {
+	     		console.log('Welcome!  Fetching your information.... ');
+	     		FB.api('/me', function(response) {
+	     			$('#firstname').val(response.name);
+	     			$('#summary').val(response.username);
+	     			$('#teams').val(response.favorite_teams)
+	      			 console.log(response);
+	     		});
+	   		} else {
+     			console.log('User cancelled login or did not fully authorize.');
+   			} 
+   		} 
+
+	   	FB.login(cb_login, {
+	   			scope: 'email,user_likes'
+	    });
+ 	};
+    // Additional initialization code such as adding Event Listeners goes here
+  
+  // Load the SDK asynchronously
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/all.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+
+
+</script>
+-->
+		
+<!--
+		<form>
+			<ul>
+				<li>
+					<label for="name">Enter You're Name!</label>
+					<input id="name" type="text" placeholder="e.g. Joshn Smith"/>
+				</li>
+				<li>
+					<label for="degree">B.S. Degree</label>
+					<input id="degree" type="checkbox" />
+				</li>
+				<li>
+					<label for="summary">Bio</label>
+					<textarea id="summary">you're life story?
+					</textarea>
+				</li>
+				<li>
+					<label for="teams">What are you favorite teams?</label>
+					<textarea id="teams">Lakers, Red Socks, etc...
+					</textarea>
+				</li>
+				<li>
+					<label for="dob">Birth Date</label>
+					<input id="dob" type="date" />
+				</li>
+					<br>
+				<li>
+					<label for="button">PUSH THE BUTTON! >>>>>>></label>
+					<input id="button" type="submit" />
+				</li>
+		</form>	
+
+-->
+<legend>Follow these simple steps in order to submit your resume</legend>
+  
+<form id="userDataForm">
+<div id="wrappme">
+<div class="accordion">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#box1" href="#collapseOne">
+        1: Personal Information
+      </a>
+    </div>
+    <div id="collapseOne" class="accordion-body collapse in">
+      <div class="accordion-inner">
+      	<div class="boxinput">
+        	<label for="First Name"></label>
+        	<span class="cat" id="firstname">First Name:</span>
+			<input id="firstname" type="text" placeholder="e.g. John"/>
+		</div>
+		<div class="boxinput">
+			<label for="Last Name"></label>
+			<span class="cat" id="lastname">Last Name:</span>
+			<input id="lastname" type="text" placeholder="e.g. Smith"/>
+		</div>
+		<div class="boxinput">
+			<label for="Last Name"></label>
+			<span class="cat" id="facebook">Facebook:</span>
+			<input id="facebook" type="text" placeholder="facebook.com/johnsmith"/>
+		</div>
+		<div class="boxinput">
+			<label for="linkedIn"></label>
+			<span class="cat" id="linkedin">LinkedIn:</span>
+			<input id="linkedin" type="text" placeholder="LinkedIn.com/johnsmith"/>
+		</div>
+		<div class="boxinput">
+			<label for="Last Name"></label>
+			<span class="cat" id="websiteurl">Website:</span>
+			<input id="websiteurl" type="text" placeholder="johnsmith.com"/>
+		</div>
+		<div class="boxinput">
+			<label for="photo"></label>
+			<span class="cat" id="photo" style="float:left;">Photo:</span>
+			<span class="btn btn-file" style="float:left; margin-bottom:10px;"><span class="fileupload-new" id="photo" ></span><input type="file" style="float:left;"/></span>
+		</div>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+        2: Contact Information
+      </a>
+    </div>
+    <div id="collapseTwo" class="accordion-body collapse">
+      <div class="accordion-inner">
+          <div class="boxleft">
+        	<label for="address"></label>
+        	<span class="cat2" id="address">Address</span>
+        		<label for="streetnumber"></label>
+        		<span class="cat" id="street">Street:</span>
+        		<input id="street" type="text" placeholder="e.g. 12345 5th st."/>
+        		<label for="city"></label>
+        		<span class="cat" id="city">City:</span>
+        		<input id="city" type="text" placeholder="e.g. Santa Monica"/>
+        		<label for="state"></label>
+        		<span class="cat" id="state">State:</span>
+        		<input id="state" type="text" placeholder="CA"/>
+        		<label for="zipcode"></label>
+        		<span class="cat" style="display:block;" id="zipcode">Zip Code:</span>
+        		<input id="zipcode" type="text" placeholder="90401"/>
+        </div>
+          <div class="boxright">
+        		<label for="phonenumber"></label>
+        		<span class="cat" id="phonenumber">Phone Number:</span>
+        		<input id="phonenumber" type="text" placeholder="e.g. 714-333-2222"/>
+        		<label for="emailaddress"></label>
+        		<span class="cat" id="email">Email:</span>
+        		<input id="email" type="text" placeholder="e.g. john@smith.com"/>
+        		<label for="skype"></label>
+        		<span class="cat" id="skype">Skype:</span>
+        		<input id="skype" type="text" placeholder="john1234"/>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+        3: Education
+      </a>
+    </div>
+    <div id="collapseThree" class="accordion-body collapse">
+      <div class="accordion-inner">
+        <div class="education_block">
+			<label for="schoolname"></label>
+        		<span class="cat">School Name:</span>
+				<input type="text" class="schoolname" placeholder="e.g. Harvard" />
+			<label for="degree"></label>
+        		<span class="cat" >Degree:</span>
+				<input type="text" class="degree" placeholder="e.g. Anthropology" />
+			<label for="GPA"></label>
+        		<span class="cat" >GPA:</span>
+				<input type="text" class="gpa" placeholder="e.g. 4.0" />
+			<label for="major"></label>
+        		<span class="cat" >Major:</span>
+				<input type="text" class="major" placeholder="e.g. Business Admin" />
+			<label for="minor"></label>
+        		<span class="cat" >Minor:</span>
+				<input type="text" class="minor" placeholder="e.g. Physics" />
+			<label for="graduated"></label>
+        		<span class="cat" >Graduated:</span>
+				<input type="date" class="graduated"/>
+		</div>
+			<span class="help-block">
+				<button href="#" class="btn, education_block_add">
+					Add School +
+				</button>
+			</span>
+      	</div>
+      </div>
+  	</div>
+  	<div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
+        4: Experience
+      </a>
+    </div>
+    <div id="collapseFour" class="accordion-body collapse">
+      <div class="accordion-inner">
+        <div class="experience_block">
+			<label for="company"></label>
+        		<span class="cat" >Company:</span>
+				<input type="text" class="company" placeholder="e.g. Google" />
+			<label for="position"></label>
+        		<span class="cat">Position:</span>
+				<input type="text" class="position" placeholder="e.g. Engineer" />
+			<label for="location"></label>
+        		<span class="cat" >Location:</span>
+				<input type="text" class="location" placeholder="e.g. Los Angeles, CA" />
+			<label for="responsibilities"></label>
+        		<span class="cat" >Responsibilities:</span>
+				<input type="text" class="responsibilities" placeholder="e.g. carried out task" />
+			<label for="startdate"></label>
+		    	<span class="cat">Start Date:</span>
+					<input type="date" class="startdate"/>
+			<label for="enddate"></label>
+		    	<span class="cat">End Date:</span>
+					<input type="date" class="enddate"/>
+		</div>
+			<span class="experience-block">
+				<button href="#" class="btn, experience_block_add">
+					Add Job +				</button>
+			</span>
+      	</div>
+    </div>
+  </div>
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFive">
+        5: Skills
+      </a>
+    </div>
+    <div id="collapseFive" class="accordion-body collapse">
+      <div class="accordion-inner">
+      	<div class="skill_block">
+        <label for="skills"></label>
+			<input class="skill" type="text" style="float:left; margin: 5px;"/>
+		</div>
+			<input class="skill" type="text" style="float:left; margin: 5px;"/>
+			<input class="skill" type="text" style="float:left; margin: 5px;"/>
+		<button href="#" class="btn, skill_block_add">Add Skill +
+			</button>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseSix">
+        6: Accomplishments / Awards
+      </a>
+    </div>
+    <div id="collapseSix" class="accordion-body collapse">
+      <div class="accordion-inner">
+        <div class="accomplishment_block">
+        <label for="accomplishments"></label>
+			<input class="accomplishment" type="text" style="float:left; margin: 5px;"/>
+		</div>
+			<input class="accomplishment" type="text" style="float:left; margin: 5px;"/>
+			<input class="accomplishment" type="text" style="float:left; margin: 5px;"/>
+		<button href="#" class="btn, accomplishment_block_add">Add Accomplishment +
+			</button>
+		</div>
+      </div>
+  </div>
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseSeven">
+        7: Attachments
+      </a>
+    </div>
+    <div id="collapseSeven" class="accordion-body collapse">
+      <div class="accordion-inner">
+        <label for="attachments"></label>
+			<input class="fileupload-new btn btn-file" id="attachment" type="file" style="float:left; margin-bottom:10px; width:80px;height:80px;"/>
+			<input class="fileupload-new btn btn-file" id="attachment" type="file" style="float:left; margin-bottom:10px; width:80px;height:80px;"/>
+			<input class="fileupload-new btn btn-file" id="attachment" type="file" style="float:left; margin-bottom:10px; width:80px;height:80px;"/>
+      </div>
+    </div>
+  </div>
+
+
+</form>
+
+<button type="submit" class="btn btn-success big-btn" id="userDataForm">Submit &amp; Save My Resume!</button>
+
+	</body>
+	<footer>
+  
+</footer>
+</html>

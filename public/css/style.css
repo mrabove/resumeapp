@@ -1,0 +1,350 @@
+body {
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-color: rgb(250, 250, 250);
+	margin:0 auto;
+}
+
+#main {
+	margin:50px;
+	width:1000px;
+	height:1000px;
+}
+
+#avatar {
+	width: 100px;
+	height: 100px;
+	border:1px solid white;
+	border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	background: url(https://fbcdn-profile-a.akamaihd.net/hprofile-ak-frc1/c9.9.113.113/s100x100/428664_600195569993184_1614040612_s.jpg) no-repeat;
+	float:left;
+}
+
+h2 {
+	font-family:Avant Garde, Verdana;
+}
+
+#namebarinfobox {
+	overflow:hidden;
+}
+
+#namebar {
+	height:100px;
+	width:100%;
+	padding:15px;
+	display: inline-block;
+	
+	
+}
+
+#name {
+	font-size:40px;
+	margin-top:-5px;
+	margin-bottom:0;
+	padding-left:10px;
+	text-shadow: 3px 3px rgb(0, 0, 0);
+	font-family:Verdana;
+	font-weight:bold;
+	color:white;
+	float:left;
+	display: inline-block;
+	overflow:hidden;
+}
+
+#infobar {
+	background-color: rgb(243, 243, 243);
+	filter: alpha(opacity=80);
+	-moz-opacity: 0.8;
+	opacity: 0.8;
+	padding:10px;
+	margin-bottom:10px;
+	filter:alpha(opacity=70); /* IE */
+    -moz-opacity:0.7; /* Mozilla */
+    opacity: 0.7; /* CSS3 */
+    border-bottom: 3px solid rgb(0, 0, 0);
+	
+}
+
+#skillsbox2 {
+	border-radius:5px;
+	background-color: rgb(243, 243, 243);
+	filter: alpha(opacity=80);
+	-moz-opacity: 0.8;
+	opacity: 0.8;
+	border-bottom: 3px solid rgb(0, 0, 0);
+	padding:10px;
+	margin-bottom:10px;
+	float: right;
+	height:200px;
+	width: 49%;
+}
+
+#infoitems li {
+	display:block;
+	float:left;
+	clear: left;
+	margin-left: -27px;
+	font-size: 13px;
+	color:white;
+}
+
+
+#skillitems li {
+	display: block;
+	float: left;
+	padding-left: 10px;
+	background-color: black;
+	color: white;
+	border-radius: 3px;
+	margin-right: 10px;
+	padding: 5px;
+	border-bottom: 3px solid orange;
+}
+
+#linkitems li {
+	display:block;
+	float:left;
+	padding-left:10px;
+	background-color: black;
+	color: white;
+	border-radius: 3px;
+	margin-right: 10px;
+	padding: 5px;
+	border-bottom: 3px solid orange;
+}
+
+#linkitems li:hover {
+	background-color: gray;
+}
+
+#skillbar {
+	background-color: rgb(243, 243, 243);
+	filter: alpha(opacity=80);
+	-moz-opacity: 0.8;
+	opacity: 0.8;
+	border-bottom: 3px solid rgb(0, 0, 0);
+	padding:10px;
+	margin-bottom:10px;
+	border-radius:5px;
+}
+
+#skillbar p {
+	float:left;
+	margin-bottom: 0;
+	margin-top: 0;
+	color:orange;
+	font-size:.8em;
+}
+
+#linkbar {
+	display: inline;
+	float:left;
+	margin-bottom:10px;
+	padding:10px;
+	width:97.5%;
+	display: inline-block;
+	border-radius:5px;
+	background-color: rgb(243, 243, 243);
+	filter: alpha(opacity=80);
+	-moz-opacity: 0.8;
+	opacity: 0.8;
+	border-bottom: 3px solid rgb(0, 0, 0);
+	
+}
+
+#linkbar p {
+	float:left;
+	margin-bottom: 0;
+	margin-top: 0;
+	color:orange;
+	font-size:.8em;
+}
+
+#TimelineOverview {
+	display: none;
+	padding:10px;
+	margin-bottom:10px;
+	border-radius:5px;
+	background-color: rgb(243, 243, 243);
+	filter: alpha(opacity=80);
+	-moz-opacity: 0.8;
+	opacity: 0.8;
+	border-bottom: 3px solid rgb(0, 0, 0);
+	width: 97.5%;
+	height:300px;
+	float:left;
+}
+
+#timelineyears {
+	float:left;
+	display: inline-block;
+}
+
+#skills2wrapper {
+	height:30px;
+	float:left;
+}
+
+#experiencebox {
+	width:45%;
+	padding:10px;
+	overflow: hidden;
+	float:left;
+	margin-bottom: 10px;
+	border-radius:5px;
+	background-color: rgb(243, 243, 243);
+	filter: alpha(opacity=80);
+	-moz-opacity: 0.8;
+	opacity: 0.8;
+	border-bottom: 3px solid rgb(0, 0, 0);
+	display: inline-block;
+}
+
+.expcompany {
+	float: left;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.explocation {
+	float: right;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.expcompany {
+	float: left;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.expposition {
+	float: left;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.expworktime {
+	float: right;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.expachieve {
+	clear:both;
+}
+
+footer {
+	clear:both;
+	background-color: rgb(243, 243, 243);
+	filter: alpha(opacity=80);
+	-moz-opacity: 0.8;
+	opacity: 0.8;
+	height:20px;
+	margin-top:20px;
+	text-align: center;
+	font-weight: bold;
+	color: black;
+}
+
+#attachmentbox {
+	clear: both;
+	border-radius:5px;
+	background-color: rgb(243, 243, 243);
+	filter: alpha(opacity=80);
+	-moz-opacity: 0.8;
+	opacity: 0.8;
+	border-bottom: 3px solid rgb(0, 0, 0);
+	padding: 10px;
+}
+
+h2.boxtitle {
+	margin-top:0;
+	margin-bottom:0;
+}
+
+.attachmentitem {
+	width: 100px;
+	height: 67px;
+	margin-top: 5px;
+	margin-right: 62px;
+	font-size: 30px;
+	color: white;
+	text-align: center;
+	border-radius: 100px;
+	padding-top: 35px;
+	background-color: rgb(0, 0, 0);
+	float: left;
+}
+
+.attachmentitem:hover {
+	background-color: orange;
+}
+
+h4 {
+	font-size: 2em;
+	font-weight: 300;
+	margin-bottom: -6.5px;
+	margin-top: 0;
+	color: orange;
+}
+
+h5 {
+	font-size: 2em;
+	float:right;
+	font-weight: 300;
+	margin-bottom: -6.5px;
+	margin-top: 0;
+	color: orange;
+}
+
+
+#wrappme {
+	width:85%;
+	margin:0 auto;
+}
+
+.btn {
+	float:right;
+	height:100%;
+	display:inline;
+}
+
+.cat {
+	font-size:160%;
+	font-weight:200;
+}
+
+.blip {
+	font-size:80%;
+	width:100%;
+	display:inline-block;
+}
+
+.boxinput {
+	float:left;
+	min-width:300px;
+	width:50%;
+	overflow:hidden;
+	display:block;
+}
+
+.btn.btn-file {
+	height: 20px;
+	padding: 4px 6px;
+	width:206px;
+	margin-left:5px;
+}
+
+a.accordion-toggle {
+	text-decoration: none;
+	color: orange;
+	font-weight: 300;
+	font-size: 20px;
+}
+
+.accordion-group {
+	background-color: white;
+}
