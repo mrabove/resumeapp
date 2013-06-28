@@ -1037,11 +1037,13 @@ fieldset {
 legend {
   display: block;
   width: 100%;
+  background-color:black;
   padding: 0;
   margin-bottom: 20px;
   font-size: 21px;
+  padding-left:10px;
   line-height: 40px;
-  color: #333333;
+  color: white;
   border: 0;
   border-bottom: 1px solid #e5e5e5;
 }

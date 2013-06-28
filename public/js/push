@@ -1,0 +1,117 @@
+$(document).ready(function(){
+
+	$.ajax('/api/resumes', {
+		complete : function(response) {
+			var resume = response.responseJSON[0];
+			console.log(resume);
+			$('h2').attr('data-id', resume.id).html(resume.name_first + ' ' + resume.name_last);
+			$('#phone').append('<li>'+resume.contact_info.phone+'</li>');
+			$('#email').append('<li>'+resume.contact_info.email+'</li>');
+			$('#linkedin').append('<a href="'+resume.linked_in+'">'+resume.linked_in+'</a>');
+			$('.website').append('<a href="'+resume.website+'">'+resume.website+'</a>');
+			$('#twitter').append('<a href="'+resume.twitter+'">'+resume.twitter+'</a>');
+			$(resume.skill).each(function(index, item){
+				$('#skillitems').append('<li>'+item.title+'</li>');
+			});
+
+
+			$(resume.experience).each(function(index, item){
+
+				var html = '<div class="expitem">'+
+							'<h3 class="expcompany"><strong>Company: </strong>'+
+								item.organization+
+							'</h3>'+
+							'<h3 class="explocation">'+
+								item.location+
+							'</h3>'+
+							'<h3 class="expposition"><strong>Role: </strong>'+
+								item.role+
+							'</h3>'+
+							'<h3 class="graduated" style="float:right;">'+
+							"'" + item.start_month_year.slice(2,4)+'</h3>'+
+							'<ol class="expachieve clearfix">'+
+							'</ol>'+
+						'</div>';
+				$('#experiencebox').append(html);
+				});
+
+			$(resume.schools).each(function(index, item){
+
+				var html = '<div class="expitem">'+
+							'<h3 class="expcompany"><strong>School: </strong>'+
+								item.name+
+							'</h3>'+
+							'<h3 class="explocation"><strong>Major: </strong>'+
+								item.major+
+							'</h3>'+
+							'<h3 class="expposition"><strong>Degree: </strong>'+
+								item.degree+
+							'</h3>'+
+							'<h3 class="graduated" style="float:right;">'+
+							"'" + item.start_month_year.slice(2,4)+'</h3>'+
+							'<ol class="expachieve clearfix">'+
+							'</ol>'+
+						'</div>';
+				$('#experiencebox2').append(html);
+				$(item.responsibilities).each(function(i,achievement){
+				$(html).find('ol').append('<li>'+achievement+'</li>');
+				});
+
+
+
+//				$('.colocation').append('<li>'+item.location+'</li>');
+//				$('.coorganization').append('<li>'+item.organization+'</li>');
+//				$('.coproject').append('<li>'+item.project+'</li>');
+//				$('.corole').append('<li>'+item.role+'</li>');
+//				$('.graduated').append ("'" + item.start_month_year.slice(2,4));
+			});	
+			$('#address').append(resume.contact_info.street_address.street+'. '+resume.contact_info.street_address.city+' '+resume.contact_info.street_address.state+' '+resume.contact_info.street_address.zip_code);
+			$('p').append('<div>'+resume.contact_info.address+'</div>');
+			$('p').append('<div>'+resume.contact_info.city+' '+resume.contact_info.state+' '+resume.contact_info.zip_code+'</div>');
+		}
+	});
+
+	$('#delete').click(function() {
+		var id = $('h2').data('id');
+		console.log(id);
+		$.ajax({
+			url : '/api/resumes/'+id,
+			type : 'DELETE'
+		});
+		window.location = window.location;
+	});
+});
+
+
+/*
+	$.ajax('/api/resumes/51c207de421aa90b41000001', {
+		complete :function(response){
+			jQuery.fn.DupeHref =  function(){		
+    		var linkedIn = $(this).find("#linked_in").attr("href");
+    		$(this).find("a").attr("href", target);
+    	}
+			var linkedIn = response.responseJSON.linked_in;
+			$('#linkedIn').html(linkedIn);
+			var twitter = response.responseJSON.twitter;
+			$('#twitter').html(twitter);
+			var website = response.responseJSON.website;
+			$('#website').html(website);
+			var firstname = response.responseJSON.name_first;
+			var lastname = response.responseJSON.name_last;
+			var fullName = firstname + " " + lastname;
+			$('#name').html(fullName);
+		}
+	});
+*/
+/*
+
+		$.ajax('/api/resumes/51c207de421aa90b41000001', {
+		complete :function(response){
+			var linkedIn = response.responseJSON.linked_in;
+			var lastname = response.responseJSON.name_last;
+			var fullName = firstname + " " + lastname;
+			$('#name').html(fullName);
+		}
+	});
+
+*/

@@ -1,14 +1,48 @@
 body {
 	background-repeat:no-repeat;
 	background-attachment:fixed;
-	background-color: rgb(250, 250, 250);
+	background-opacity:0.9;
+	background-color: rgb(123, 158, 231)!important;
 	margin:0 auto;
 }
 
 #main {
 	margin:50px;
 	width:1000px;
+	margin: 0 auto;
 	height:1000px;
+}
+
+#delete {
+	height: 35px;
+	margin-bottom:10px;
+}
+
+#right {
+	float:left;
+}
+
+#rightbox {
+	padding:10px;
+	width: 480px;
+	height: 500px;
+	margin-bottom: 10px;
+	border-radius:5px;
+	background-color: white;
+	filter: alpha(opacity=80);
+	-moz-opacity: 0.8;
+	border-bottom: 3px solid rgb(0, 0, 0);
+	display: inline-block;
+}
+
+#linkitems a{
+	text-decoration: none;
+	color:white;
+}
+
+#left {
+	width:50%; 
+	float:left;"
 }
 
 #avatar {
@@ -18,7 +52,7 @@ body {
 	border-radius: 100px;
 	-webkit-border-radius: 100px;
 	-moz-border-radius: 100px;
-	background: url(https://fbcdn-profile-a.akamaihd.net/hprofile-ak-frc1/c9.9.113.113/s100x100/428664_600195569993184_1614040612_s.jpg) no-repeat;
+	background: url(http://i42.tinypic.com/2wohan4.png) no-repeat;
 	float:left;
 }
 
@@ -85,7 +119,6 @@ h2 {
 	display:block;
 	float:left;
 	clear: left;
-	margin-left: -27px;
 	font-size: 13px;
 	color:white;
 }
@@ -120,14 +153,16 @@ h2 {
 }
 
 #skillbar {
-	background-color: rgb(243, 243, 243);
+	float: left;
+	margin-bottom: 10px;
+	padding: 10px;
+	width: 97.5%;
+	display: inline-block;
+	border-radius: 5px;
+	background-color: white;
 	filter: alpha(opacity=80);
 	-moz-opacity: 0.8;
-	opacity: 0.8;
 	border-bottom: 3px solid rgb(0, 0, 0);
-	padding:10px;
-	margin-bottom:10px;
-	border-radius:5px;
 }
 
 #skillbar p {
@@ -146,10 +181,9 @@ h2 {
 	width:97.5%;
 	display: inline-block;
 	border-radius:5px;
-	background-color: rgb(243, 243, 243);
+	background-color: white;
 	filter: alpha(opacity=80);
 	-moz-opacity: 0.8;
-	opacity: 0.8;
 	border-bottom: 3px solid rgb(0, 0, 0);
 	
 }
@@ -187,17 +221,21 @@ h2 {
 	float:left;
 }
 
+.expitem {
+	border-bottom: 1px solid lightgray;;
+}
+
 #experiencebox {
-	width:45%;
 	padding:10px;
 	overflow: hidden;
 	float:left;
+	width:460px;
+	height: 500px;
 	margin-bottom: 10px;
 	border-radius:5px;
-	background-color: rgb(243, 243, 243);
+	background-color: white;
 	filter: alpha(opacity=80);
 	-moz-opacity: 0.8;
-	opacity: 0.8;
 	border-bottom: 3px solid rgb(0, 0, 0);
 	display: inline-block;
 }
@@ -205,11 +243,15 @@ h2 {
 .expcompany {
 	float: left;
 	margin-top: 0;
+	line-height: 1;
+	font-weight:300;
 	margin-bottom: 0;
 }
 
 .explocation {
 	float: right;
+	line-height: 1;
+	font-weight:300;
 	margin-top: 0;
 	margin-bottom: 0;
 }
@@ -217,23 +259,44 @@ h2 {
 .expcompany {
 	float: left;
 	margin-top: 0;
+	line-height: 1;
+	font-weight:300;
 	margin-bottom: 0;
+}
+
+.graduated {
+	font-weight:300;
+	font-size:20px;
+	margin-top:-1px;
+	height:40px;
+	text-align:center;
+	width:40px;
+	background-color:orange;
+	border-radius:100% ;
+
 }
 
 .expposition {
 	float: left;
+	font-weight:300;
+	clear:right;
+	line-height: 1;
 	margin-top: 0;
 	margin-bottom: 0;
 }
 
 .expworktime {
 	float: right;
+	font-weight:300;
+	line-height: 1;
 	margin-top: 0;
 	margin-bottom: 0;
 }
 
 .expachieve {
 	clear:both;
+	line-height: 1;
+	font-weight:300;
 }
 
 footer {
@@ -279,13 +342,19 @@ h2.boxtitle {
 	float: left;
 }
 
+#bigcontainer {
+	width:100%; 
+	height:500px;
+}
+
 .attachmentitem:hover {
 	background-color: orange;
 }
 
 h4 {
-	font-size: 2em;
-	font-weight: 300;
+	clear:both; 
+	font-size: 40px!important;
+	float:left;
 	margin-bottom: -6.5px;
 	margin-top: 0;
 	color: orange;

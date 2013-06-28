@@ -3,11 +3,14 @@
 	<head>	
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
-
+		<link rel="stylesheet" href="css/bootstrap.css">
 		<script type="text/javascript" src="js/jquery.js"></script>
-		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/pull.js"></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
 	</head>
 	<body>
+		
+		<legend>View and edit this resume</legend>
 		<div id="main">
 			<div id="namebar">
 				<div id="avatar">
@@ -16,81 +19,27 @@
 				<h2 id="name">
 				</h2>
 				<ul id="infoitems" class="clearfix">
-					<li class="infoitem">
-						1410 5th st #509 Santa Monica, CA 90401
-					</li>
-					<li class="infoitem">
-						7143229969
-					</li>
-					<li class="infoitem">
-						brian@senti.in
-					</li>
-					<li id="website">
-						<a id="website" href="website"><p id="website"></p></a>
-					</li>
+					<li id="address"></li>
+					<li id="phone"></li>
+					<li id="email"></li>
+					<li class="website"></li>
 				</ul>
 			</div>
 			</div>
 			<h4>Skills</h4>
 			<div id="skillbar" class="clearfix">
 				<ul id="skillitems">
-					<li class="skillitem">
-						I'm smart
-					</li>
-					<li class="skillitem">
-						I'm fast
-					</li>
-					<li class="skillitem">
-						I'm cool
-					</li>
-					<li class="skillitem">
-						I'm a ninja
-					</li>
 				</ul>
 			</div>
 			<h4>Links</h4>
 			<div id="linkbar" class="clearfix">
 				<ul id="linkitems">
-					<a id="linkedIn" href="relativeURL"><p id="linkedIn"></p><li id="linkedIn">
-					</li></a>
-					<a href="http://www.facebook.com/mrabove"><li class="linkitem">
-						facebook.com/me
-					</li></a>
-					<a href="http://www.facebook.com/mrabove"><li class="linkitem">
-						facebook.com/me
-					</li></a>
-					<a href="http://www.facebook.com/mrabove"><li class="linkitem">
-						facebook.com/me
-					</li></a>
+					<li class="website"></li>
+					<li id="linkedin"></li>
+					<li id="twitter"></li>
 				</ul>
 			</div>
-			<div id="TimelineOverview" class="clearfix">
-				<h2 id="timelineheader">
-					Timeline Overview:
-				</h2>
-					<div class="timelinekeyitem">
-					</div>
-				<div id="timelinebars">
-					<div class="timeline">
-					</div>
-					<div class="timeline">
-					</div>
-					<div class="timeline">
-					</div>
-					<div class="timeline">
-					</div>
-					<div class="timeline">
-					</div>
-				</div>
-				<div id="timelineyears" class="clearfix">
-					<div class="timelineyear">
-						2008 2009 2010 2011 2012 2013
-					</div>
-				</div>
-			</div>
 			<div id="educationbox" class="clearfix">
-				<h2 class="boxtitle">
-				</h2>
 					<div class="educationitem">
 					</div>
 					<div class="educationitem">
@@ -98,139 +47,25 @@
 					<div class="educationitem">
 					</div>
 			</div>
-			<div id="wrapper">
+			
+
+			<div id="bigcontainer">
 				<div id="left">
-					<h4>Expierence</h4>
-						<div id="experiencebox">
-							<div class="expbox">
-								<div class="expitem">
-								<h3 class="expcompany">
-									XYZ Company
-								</h3>
-								<h3 class="explocation">
-								Santa Monica, CA
-								</h3>
-								<h3 class="expposition">
-								Super Ninja Coder
-								</h3>
-								<h3 class="expworktime">
-								2009-2013
-								</h3>
-								<ol class="expachieve clearfix">
-									<li class="expachieveitem">
-									Awesome Achievement
-									</li>
-									<li class="expachieveitem">
-										Awesome Achievement
-									</li>
-									<li class="expachieveitem">
-									Awesome Achievement
-									</li>
-									<li class="expachieveitem">
-									Awesome Achievement
-									</li>
-									<li class="expachieveitem">
-									Awesome Achievement
-									</li>
-									<li class="expachieveitem">
-									Awesome Achievement
-									</li>
-								</ol>
-						</div>
-					</div>
-					<div class="expitem">
-						<h3 class="expcompany">
-							XYZ Company
-						</h3>
-						<h3 class="explocation">
-							Santa Monica, CA
-						</h3>
-						<h3 class="expposition">
-							Super Ninja Coder
-						</h3>
-						<h3 class="expworktime">
-							2009-2013
-						</h3>
-						<ol class="expachieve">
-							<li class="expachieveitem">
-								Awesome Achievement
-							</li>
-							<li class="expachieveitem">
-								Awesome Achievement
-							</li>
-							<li class="expachieveitem">
-								Awesome Achievement
-							</li>
-							<li class="expachieveitem">
-								Awesome Achievement
-							</li>
-							<li class="expachieveitem">
-								Awesome Achievement
-							</li>
-							<li class="expachieveitem">
-								Awesome Achievement
-							</li>
-						</ol>
-					</div>
-					<div class="expitem">
-						<h3 class="expcompany">
-							XYZ Company
-						</h3>
-						<h3 class="explocation">
-							Santa Monica, CA
-						</h3>
-						<h3 class="expposition">
-							Super Ninja Coder
-						</h3>
-						<h3 class="expworktime">
-							2009-2013
-						</h3>
-						<ol class="expachieve">
-							<li class="expachieveitem">
-								Awesome Achievement
-							</li>
-							<li class="expachieveitem">
-								Awesome Achievement
-							</li>
-							<li class="expachieveitem">
-								Awesome Achievement
-							</li>
-							<li class="expachieveitem">
-								Awesome Achievement
-							</li>
-							<li class="expachieveitem">
-								Awesome Achievement
-							</li>
-							<li class="expachieveitem">
-								Awesome Achievement
-							</li>
-						</ol>
+					<h4>Experience</h4>
+					<div id="experiencebox">
 					</div>
 				</div>
 				<div id="right">
-					<h4>More Skills</h4>
-					<div id="skillsbox2" class="clearfix">
-						<ul id="skills2wrapper">
-							<li class="skills2">
-							Awesome Skill
-							</li>
-							<li class="skills2">
-							Awesome Skill
-							</li>
-							<li class="skills2">
-							Awesome Skill
-							</li>
-							<li class="skills2">
-							Awesome Skill
-							</li>
-							<li class="skills2">
-							Awesome Skill
-							</li>
-						</ul>
-					</div>
+					<h4>Education</h4><Br>
+						<div id="rightbox">
+							<div id="experiencebox2">
+							</div>
+						</div>
 				</div>
-			</div>
-			<h4 style="clear:both;">Attachments</h4>
+			</div>	
+
+
+<!--			<h4 style="clear:both;">Attachments</h4>
 			<div id="attachmentbox" class="clearfix">
 					
 					<div class="attachmentitem">
@@ -252,8 +87,13 @@
 						PDF
 					</div>
 			</div>
+-->
 	</body>
+<br>
+<button type="submit" class="btn btn-danger big-btn" style="width:100%; font-size:25px; font-weight:200;"id="delete">Delete This Resume!</button><br>
+
+
 	<footer>
-  Some copyright info or perhaps some author info goes here?
+  blah blah blah this is a footer!
 </footer>
 </html>
